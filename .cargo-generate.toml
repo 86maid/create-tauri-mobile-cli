@@ -1,0 +1,8 @@
+[template]
+name = "create-tauri-mobile-cli"
+description = "A Tauri + xterm.js CLI template"
+
+[placeholders.identifier]
+type = "string"
+prompt = "App Identifier (e.g. com.google.camera)"
+default = "com.example.{{project-name}}"
