@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "__project_name__",
+  "productName": "{{project-name}}",
   "version": "0.1.0",
-  "identifier": "__identifier__",
+  "identifier": "{{identifier}}",
   "build": {
     "frontendDist": "../src"
   },
@@ -10,7 +10,7 @@
     "withGlobalTauri": true,
     "windows": [
       {
-        "title": "__project_name__",
+        "title": "{{project_name}}",
         "width": 800,
         "height": 600
       }

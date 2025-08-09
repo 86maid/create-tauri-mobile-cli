@@ -1,5 +1,5 @@
 [package]
-name = "__project_name__"
+name = "{{project-name}}"
 version = "0.1.0"
 description = "A Tauri App"
 authors = ["you"]
