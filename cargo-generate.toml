@@ -1,7 +1,11 @@
 [template]
 name = "create-tauri-mobile-cli"
 description = "A Tauri + xterm.js CLI template"
-include = ["src-tauri/tauri.conf.json", "src-tauri/Cargo.toml"]
+include = [
+  "src-tauri/tauri.conf.json",
+  "src-tauri/Cargo.toml",
+  "cargo-generate.toml",
+]
 
 [placeholders.identifier]
 type = "string"
