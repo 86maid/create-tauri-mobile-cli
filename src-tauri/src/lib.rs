@@ -1,10 +1,3 @@
-use clap::Parser;
-use std::{
-    io::Read,
-    sync::{Arc, Mutex, OnceLock},
-};
-use tauri::{async_runtime::JoinHandle, AppHandle, Emitter, Event, EventId, Listener, Manager};
-use tokio::sync::Notify;
 
 #[tauri::command]
 async fn main() {
@@ -14,6 +7,19 @@ async fn main() {
 
     unhook_stdout();
 }
+
+// ============================================================================================================
+// ============================================================================================================
+// ============================================================================================================
+
+use clap::Parser;
+use std::{
+    io::Read,
+    sync::{Arc, Mutex, OnceLock},
+};
+use tauri::{async_runtime::JoinHandle, AppHandle, Emitter, Event, EventId, Listener, Manager};
+use tokio::sync::Notify;
+
 
 pub fn listen(callback: impl Fn(Event) + Send + 'static) {
     APP_HANDLE.get().unwrap().listen("cli-read", callback);
