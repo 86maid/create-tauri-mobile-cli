@@ -6,4 +6,4 @@ include = ["src-tauri/tauri.conf.json", "src-tauri/Cargo.toml"]
 [placeholders.identifier]
 type = "string"
 prompt = "App Identifier (e.g. com.google.camera)"
-default = "com.{{ env USER | env USERNAME | default `example` }}"
+default = "com.example.test"
