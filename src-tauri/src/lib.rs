@@ -1,21 +1,25 @@
-
 #[tauri::command]
 async fn main() {
     hook_stdout().await;
 
-    // your code
+    // Write your code here
+    // Use clap_parse() to parse command line arguments
 
     unhook_stdout();
 }
 
-/// cargo tauri android build --apk --target aarch64 
-/// OPENSSL_DIR openssl_3.5.2_arm64-v8a
-/// OPENSSL_LIB openssl_3.5.2_arm64-v8a/lib
-/// OPENSSL_INCLUDE openssl_3.5.2_arm64-v8a/include
-
-// ============================================================================================================
-// ============================================================================================================
-// ============================================================================================================
+// Env:
+// OPENSSL_DIR openssl_3.5.2_arm64-v8a
+// OPENSSL_LIB openssl_3.5.2_arm64-v8a/lib
+// OPENSSL_INCLUDE openssl_3.5.2_arm64-v8a/include
+//
+// Debug:
+// cargo tauri android build --apk --target aarch64 --debug
+//
+// Release:
+// cargo tauri android build --apk --target aarch64
+//
+// Note: The release build requires signing
 
 use clap::Parser;
 use std::{
